@@ -8,7 +8,7 @@ const MarkdownForm = ({ onEntryChange }) => {
   };
   return (
     <form>
-      <textarea id="markdown-input" onKeyUp={onChange} />
+      <textarea width="100%" id="markdown-input" onKeyUp={onChange} />
     </form>
   );
 };

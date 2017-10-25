@@ -3,11 +3,13 @@ import MarkdownForm from './MarkdownForm';
 import MarkdownPreview from './MarkdownPreview';
 import { markdown } from 'markdown';
 
+import 'bootstrap';
+import '../styles/styles.scss';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { userinput: 'TREE' };
-
+    this.state = { userinput: '' };
     this.onEntryChange = this.onEntryChange.bind(this);
   }
 
@@ -22,10 +24,15 @@ class App extends React.Component {
     const { onEntryChange } = this;
     const { markDownHTML } = this.state;
     return (
-      <div>
-        <h1>Markdown previewer</h1>
-        <MarkdownForm onEntryChange={onEntryChange} />
-        <MarkdownPreview markDownContent={markDownHTML} />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col">
+            <MarkdownForm onEntryChange={onEntryChange} />
+          </div>
+          <div className="col">
+            <MarkdownPreview markDownContent={markDownHTML} />
+          </div>
+        </div>
       </div>
     );
   }

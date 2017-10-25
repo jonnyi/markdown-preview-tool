@@ -5,7 +5,6 @@ module.exports = {
   entry: ['./src/index.js'],
   output: {
     path: path.resolve('public'),
-    //publicPath: 'public',
     filename: 'bundle.js',
     sourceMapFilename: 'bundle.js.map'
   },
@@ -31,6 +30,13 @@ module.exports = {
   plugins: [
     new webpack.SourceMapDevToolPlugin({
       filename: 'bundle.js.map'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default'],
+      Tether: 'tether'
     })
   ]
 };

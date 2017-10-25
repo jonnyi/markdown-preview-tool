@@ -14,9 +14,7 @@ class MarkdownPreview extends React.Component {
         ref={(div) => {
           this.previewDiv = div;
         }}
-      >
-        this crap
-      </div>
+      />
     );
   }
 }
