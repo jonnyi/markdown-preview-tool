@@ -1,12 +1,14 @@
+// TODO: Minor styling tweaks
+// TODO: Write readme
+
 import React from 'react';
 import MarkdownForm from './MarkdownForm';
 import MarkdownPreview from './MarkdownPreview';
 import { markdown } from 'markdown';
 
-import 'bootstrap';
 import '../styles/styles.scss';
 
-class App extends React.Component {
+class App extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = { userinput: '' };
@@ -24,7 +26,7 @@ class App extends React.Component {
     const { onEntryChange } = this;
     const { markDownHTML } = this.state;
     return (
-      <div className="container-fluid">
+      <div id="app-container" className="container-fluid">
         <div className="row">
           <div className="col">
             <MarkdownForm onEntryChange={onEntryChange} />

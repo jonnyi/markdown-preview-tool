@@ -1,24 +1,17 @@
 import React from 'react';
 
-class MarkdownPreview extends React.Component {
+class MarkdownPreview extends React.PureComponent {
   constructor(props) {
     super(props);
-  }
-  componentDidUpdate() {
-    this.previewDiv.innerHTML = this.props.markDownContent;
   }
   render() {
     return (
       <div
-        id="preview"
-        ref={(div) => {
-          this.previewDiv = div;
-        }}
+        id="markdown-preview"
+        dangerouslySetInnerHTML={{ __html: this.props.markDownContent }}
       />
     );
   }
 }
-
-//ref={(input) => { this.textInput = input; }} />
 
 export default MarkdownPreview;

@@ -30,13 +30,6 @@ module.exports = {
   plugins: [
     new webpack.SourceMapDevToolPlugin({
       filename: 'bundle.js.map'
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Popper: ['popper.js', 'default'],
-      Tether: 'tether'
     })
   ]
 };
