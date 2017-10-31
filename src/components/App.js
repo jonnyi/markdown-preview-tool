@@ -1,6 +1,3 @@
-// TODO: Minor styling tweaks
-// TODO: Write readme
-
 import React from 'react';
 import MarkdownForm from './MarkdownForm';
 import MarkdownPreview from './MarkdownPreview';
